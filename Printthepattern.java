@@ -1,0 +1,30 @@
+import java.io.*;
+import java.util.*;
+
+class Main
+{
+
+	public static void solve(int n)
+    {
+        if(n==1)
+		{
+			System.out.println("*");
+			return;
+		}
+		solve(n-1);
+		for(int i=0;i<n;i++)
+		{
+			System.out.print("* ");
+		}
+        System.out.println();
+    }
+	
+    public static void main(String args[])throws IOException
+    {
+        Scanner sc = new Scanner(System.in);
+        
+        int n=sc.nextInt();
+		solve(n);
+
+    }
+}
